@@ -1,16 +1,11 @@
 "use client"
 
-import { Github, Linkedin, Mail, Heart } from "lucide-react"
+import { Github, Linkedin, Mail } from "lucide-react"
 
 export default function Footer() {
   return (
     <footer className="border-t border-border bg-card/50">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-6 py-10 sm:flex-row sm:justify-between">
-        <div className="flex items-center gap-1 text-sm text-muted-foreground">
-          Built with <Heart size={14} className="text-primary" /> by
-          <span className="font-semibold text-foreground">Sumeet Pathak</span>
-        </div>
-
         <div className="flex items-center gap-4">
           <a
             href="https://github.com/Svpathak05"

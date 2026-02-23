@@ -20,7 +20,23 @@ const projects: Project[] = [
       "Automated team formation and mentorship platform with role-based dashboards and intelligent matching for hackathons and events.",
     tech: ["MongoDB", "Express.js", "React", "Node.js"],
     github: "https://github.com/Svpathak05",
-    live: "#",
+    live: "https://talenthunt-frontend.vercel.app/",
+    featured: true,
+  },
+  {
+    title: "OSINT Search",
+    description:
+      "Intelligent keyword search engine across Twitter, Instagram, news websites and more. Authenticates news sources and validates information authenticity using advanced algorithms.",
+    tech: ["MERN Stack", "Web Scraping", "API Integration", "NLP Authentication"],
+    github: "https://github.com/Svpathak05",
+    featured: true,
+  },
+  {
+    title: "AI Chatbot for PDF",
+    description:
+      "LLM-powered chatbot that processes PDF documents and enables intelligent Q&A interactions with document content through natural language understanding.",
+    tech: ["React", "Node.js", "LLM APIs", "PDF Processing"],
+    github: "https://github.com/Svpathak05",
     featured: true,
   },
   {
@@ -46,21 +62,6 @@ const projects: Project[] = [
       "Socket.io based chat system with user rooms, live messaging, read receipts, and typing indicators.",
     tech: ["React", "Node.js", "Socket.io", "MongoDB"],
     github: "https://github.com/Svpathak05",
-  },
-  {
-    title: "AI Resume Analyzer",
-    description:
-      "Upload resumes to get skill insights, keyword matching for target job roles, and improvement suggestions.",
-    tech: ["React", "Node.js", "AI API", "NLP"],
-    github: "https://github.com/Svpathak05",
-  },
-  {
-    title: "Developer Portfolio Template",
-    description:
-      "Responsive, customizable portfolio template for developers with dark theme, smooth animations, and modern design.",
-    tech: ["React", "Tailwind CSS", "Framer Motion"],
-    github: "https://github.com/Svpathak05",
-    live: "#",
   },
 ]
 
@@ -122,7 +123,7 @@ export default function Projects() {
                   >
                     <Github size={18} />
                   </a>
-                  {project.live && (
+                  {project.live && project.live !== "#" && (
                     <a
                       href={project.live}
                       target="_blank"
@@ -136,7 +137,7 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Content */}
+              {/* Title and Description */}
               <h3 className="mb-2 text-lg font-semibold text-foreground group-hover:text-primary">
                 {project.title}
               </h3>

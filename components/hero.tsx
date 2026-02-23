@@ -187,7 +187,7 @@ export default function Hero() {
             <div className="absolute -inset-4 rounded-full bg-background/60 backdrop-blur-sm" />
 
             {/* Photo container - taller aspect ratio to show face properly */}
-            <div className="relative h-64 w-56 overflow-hidden rounded-3xl border-2 border-primary/20 sm:h-80 sm:w-64">
+            <div className="relative h-64 w-64 overflow-hidden rounded-full border-2 border-primary/20 sm:h-80 sm:w-80">
               <Image
                 src="/images/profile.png"
                 alt="Sumeet Pathak - Full Stack Developer"
@@ -200,20 +200,7 @@ export default function Hero() {
               <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-background/60 to-transparent" />
             </div>
 
-            {/* Floating status badge */}
-            <motion.div
-              animate={{ y: [0, -6, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 rounded-full border border-border glass px-3 py-1.5 whitespace-nowrap"
-            >
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
-              </span>
-              <span className="text-xs font-medium text-foreground">
-                Open to work
-              </span>
-            </motion.div>
+
           </div>
         </motion.div>
       </div>
